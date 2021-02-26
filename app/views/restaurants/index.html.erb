@@ -10,9 +10,11 @@
       <div class="card-body">
         <h5 class="card-title"><%= restaurant.name%></h5>
         <p class="card-text">Type of cuisine:<%= restaurant.cuisine%></p>
-        <%= link_to "See detail", restaurant_path(restaurant), class:"btn btn-secondary"%>
-        <div><%= link_to "Make change", edit_restaurant_path(restaurant), class:"btn btn-warning"%></div>
-        <div><%= link_to "Delete", restaurant_path(restaurant), method: :delete, data:{confirm: "Are you sure?"}, class:"btn btn-danger"%></div>   
+        <div class="d-flex flex-row">
+            <div><%= link_to "See detail", restaurant_path(restaurant), class:"btn btn-secondary m-1"%></div>
+            <div><%= link_to "Make change", edit_restaurant_path(restaurant), class:"btn btn-warning m-1"%></div>
+            <div><%= link_to "Delete", restaurant_path(restaurant), method: :delete, data:{confirm: "Are you sure?"}, class:"btn btn-danger m-1"%></div>   
+        </div>
       </div>
     </div>
 
