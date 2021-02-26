@@ -8,5 +8,6 @@
 <div><%= restaurant.cuisine%></div>
 <img src =<%= restaurant.image_url%> width="500px">
 <div><%= link_to "See detail", restaurant_path(restaurant)%></div>
+<div><%= link_to "Make change", edit_restaurant_path(restaurant)%></div>
 
 <% end %>
