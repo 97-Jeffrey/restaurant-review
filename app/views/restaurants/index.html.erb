@@ -1,0 +1,10 @@
+<h1>View all the restaurants:<h1>
+
+<% @restaurants.each do |restaurant|%>
+
+<div><%= restaurant.name%></div>
+<div><%= restaurant.cuisine%></div>
+<img src =<%= restaurant.image_url%> width="500px">
+<div><%= link_to "See detail", restaurant_path(restaurant)%></div>
+
+<% end %>
