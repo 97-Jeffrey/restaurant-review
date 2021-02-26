@@ -1,16 +1,16 @@
-<p>
+<h1 class="m-2">
   <strong>Restaurant name:</strong>
   <%= @restaurant.name %>
-</p>
+</h1>
  
-<p>
+<h2 class="m-2">
   <strong>Address:</strong>
   <%= @restaurant.address %>
-</p>
-<p>
+</h2>
+<h3 class="m-2">
   <strong>Cuisine:</strong>
   <%= @restaurant.cuisine %>
-</p>
+</h3>
 
 <p>
   <img src=<%= @restaurant.image_url %> alt="restaurant" width="500" >
@@ -21,4 +21,4 @@
   <%= @restaurant.description %>
 </p>
 
-<%= link_to "Back", restaurants_path%>
+<%= link_to "Back", restaurants_path, class:"btn btn-primary m-2"%>

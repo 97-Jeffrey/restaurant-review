@@ -4,33 +4,33 @@
 
 <div>
     <%= form.label :name %><br>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class:"form-control" %>
 </div>
 
 <div>
     <%= form.label :address %><br>
-    <%= form.text_field :address %>
+    <%= form.text_field :address, class:"form-control" %>
 </div>
 <div>
     <%= form.label :cuisine %><br>
-    <%= form.text_field :cuisine %>
+    <%= form.text_field :cuisine, class:"form-control" %>
 </div>
 <div>
     <%= form.label :image_url %><br>
-    <%= form.text_field :image_url %>
+    <%= form.text_field :image_url, class:"form-control" %>
 </div>
 <div>
     <%= form.label :description %><br>
-    <%= form.text_field :description %>
+    <%= form.text_field :description, class:"form-control" %>
 </div>
 
 
 
  <p>
-    <%= form.submit %>
+    <%= form.submit class:"btn btn-primary m-2" %>
   </p>
 
-  <%= link_to "back", restaurants_path%>
+  <%= link_to "back", restaurants_path, class:"btn btn-secondary m-1"%>
 
 
 <% end%>

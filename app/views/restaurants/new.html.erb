@@ -3,34 +3,30 @@
 <%= form_with scope: :restaurant, url: restaurants_path, local:true do |form|%>
 
 <div>
-    <%= form.label :name %><br>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class:"form-control m-2 mt-4", placeholder:"Restaurant name" %>
 </div>
 
 <div>
-    <%= form.label :address %><br>
-    <%= form.text_field :address %>
+
+    <%= form.text_field :address, class:"form-control m-2", placeholder:"Restaurant address" %>
 </div>
 <div>
-    <%= form.label :cuisine %><br>
-    <%= form.text_field :cuisine %>
+    <%= form.text_field :cuisine, class:"form-control m-2", placeholder:"What Cuisine"  %>
 </div>
 <div>
-    <%= form.label :image_url %><br>
-    <%= form.text_field :image_url %>
+    <%= form.text_field :image_url, class:"form-control m-2", placeholder:"Please provide a image url"  %>
 </div>
 <div>
-    <%= form.label :description %><br>
-    <%= form.text_field :description %>
+    <%= form.text_field :description, class:"form-control m-2", placeholder:"Give a description"  %>
 </div>
 
 
 
  <p>
-    <%= form.submit %>
+    <%= form.submit class:"btn btn-primary m-3"%>
   </p>
 
-  <%= link_to "back", restaurants_path%>
+  <%= link_to "back", restaurants_path, class:"btn btn-secondary m-3"%>
 
 
 <% end%>
