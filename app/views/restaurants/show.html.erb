@@ -28,11 +28,25 @@
     </div>
 
   <div class="review m-5">
-    <h2>Add a review:</h2>
+    
+    <div class="m-3">
+    <% if @restaurant.reviews.any? %>
+      <h2>All reviews:</h2>
+    <% end%>
+        <% @restaurant.reviews.each do |review|%>
+          <div class="m-4" >
+            <div><strong><%= review.person %></strong></div>
+            <%= review.body %>
+            <p>
+              <%= link_to "delete", [review.restaurant, review], method: :delete, data:{confirm: "Are you sure?"}, class:"btn btn-danger mt-2"%>
+            </p>
+          </div>
+        <% end%>
+        <h2>Add a review:</h2>
 
     <%= form_with model: [ @restaurant, @restaurant.reviews.build ] do |form| %>
       <p>
-        <%= form.text_field :person, placeholder:"you are:" %>
+        <%= form.text_field :person, placeholder:"You are:" %>
       </p>
       <p>
         <%= form.text_area :body, placeholder:"How's this restaurant"%>
@@ -41,16 +55,6 @@
         <%= form.submit class:"btn btn-primary" %>
       </p>
     <% end%>
-    <div class="mt-5">
-      <h2>All reviews:</h2>
-        <% @restaurant.reviews.each do |review|%>
-          <div class="m-4">
-            <div><strong><%= review.person %></strong></div>
-          <p>
-            <%= review.body %>
-          </p>
-          </div>
-        <% end%>
   </div>
 
 </div>
