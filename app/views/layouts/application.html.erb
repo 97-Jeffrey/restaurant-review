@@ -18,6 +18,11 @@
   </head>
   <body>
     <%= render "welcome/header"%>
+
+    <% if notice%>
+      <%= render "layouts/alerts"%>
+    <% end%>
+
     <%= yield %>
 
     <!-- Optional JavaScript; choose one of the two! -->
