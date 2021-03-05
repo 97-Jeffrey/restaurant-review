@@ -17,14 +17,14 @@ class RestaurantsController < ApplicationController
   def create
     @restaurant = Restaurant.new(restaurant_params)
     @restaurant.save
-    redirect_to @restaurant
+    redirect_to @restaurant, {notice:"A new restaurant added"}
   end
 
   def update
     @restaurant = Restaurant.find(params[:id])
    
     if @restaurant.update(restaurant_params)
-      redirect_to @restaurant
+      redirect_to @restaurant, {notice: "updated successfully"}
     else
       render 'edit'
     end
@@ -33,7 +33,7 @@ class RestaurantsController < ApplicationController
   def destroy
     @restaurant = Restaurant.find(params[:id])
     @restaurant.destroy
-    redirect_to restaurants_path
+    redirect_to restaurants_path, {notice: "A restaurant deleted"}
   end
 
   private
