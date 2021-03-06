@@ -8,7 +8,7 @@
 
 - Please run `rails s` to start the server.
 
-- You might need to run `rails: webpacker:install` in project root if error messages such as `Webpacker can't find application.js` shows up in terminal after running the server.
+- You might need to run `rails: webpacker:install` in project root if error messages such as `Webpacker can't find application.js` shows up in terminal after running the server. To do this, you need node version > `10.17.0`
 
 - My ruby version: 3.0.0
 
