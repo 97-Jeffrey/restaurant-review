@@ -42,7 +42,10 @@
             </p>
           </div>
         <% end%>
-        <h2>Add a review:</h2>
+
+        
+    <% if user_signed_in?%>
+    <h2>Add a review:</h2>
 
     <%= form_with model: [ @restaurant, @restaurant.reviews.build ] do |form| %>
       <p>
@@ -54,6 +57,17 @@
       <p>
         <%= form.submit class:"btn btn-primary" %>
       </p>
+
+        
+    <% end%>
+    <% else%>
+        <div class="alert alert-warning alert-dismissible fade show mt-3" role="alert">
+      <%= @notice%>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+      </button>
+    </div>
+    <%= link_to "Sign Up", new_restaurant_path, class:"btn btn-primary"%>
+    <%= link_to "Sign In", new_user_session_path, class:"btn btn-secondary"%>
     <% end%>
   </div>
 

@@ -6,6 +6,7 @@ class RestaurantsController < ApplicationController
   end
   def show
     @restaurant = Restaurant.find(params[:id])
+    @notice = "Please sign up or sign in to add a review"
   end
 
   def new
