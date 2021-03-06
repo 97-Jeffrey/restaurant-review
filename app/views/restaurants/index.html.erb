@@ -5,7 +5,9 @@
   <%= @notice%>
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
   </button>
-</div>
+ </div>
+  <%= link_to "Sign Up", new_restaurant_path, class:"btn btn-primary m-2"%>
+  <%= link_to "Sign In", new_user_session_path, class:"btn btn-secondary m-2"%>
 <% end %>
 
 <div class="d-flex flex-row bd-highlight mb-3 flex-wrap justify-content-center">
