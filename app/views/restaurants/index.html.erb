@@ -1,5 +1,12 @@
-
+<% if user_signed_in?%>
 <div><%= link_to "Add a restaurant", new_restaurant_path, class:"btn btn-secondary m-3"%></div>
+<% else%>
+ <div class="alert alert-warning alert-dismissible fade show mt-3" role="alert">
+  <%= @notice%>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+  </button>
+</div>
+<% end %>
 
 <div class="d-flex flex-row bd-highlight mb-3 flex-wrap">
 <% @restaurants.each do |restaurant|%>
