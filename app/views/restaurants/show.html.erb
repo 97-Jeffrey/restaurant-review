@@ -31,7 +31,9 @@
     
     <div class="m-3">
       <% if @restaurant.reviews.any? %>
-        <h2>All reviews:</h2>
+        <button class="btn btn-light fs-3 fw-bold">All reviews:
+        <span class="badge bg-primary" style="vertical-align: top;"><%= @restaurant.reviews.length%></span>
+        </button>
       <% end%>
         <% @restaurant.reviews.each do |review|%>
           <div class="m-4" style="border:2px solid orange; width:500px; padding:10px; border-radius:15px;">
