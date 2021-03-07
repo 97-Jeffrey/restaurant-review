@@ -51,10 +51,10 @@
 
     <%= form_with model: [ @restaurant, @restaurant.reviews.build ] do |form| %>
       <p>
-        <%= form.text_field :person, placeholder:"You are:", class:"mt-3" %>
+        <%= form.text_field :person, placeholder:"You are:", class:"form-control mt-3" %>
       </p>
       <p>
-        <%= form.text_area :body, placeholder:"How's this restaurant"%>
+        <%= form.text_area :body, placeholder:"How's this restaurant", class:"form-control"%>
       </p>
       <p>
         <%= form.submit class:"btn btn-primary" %>
