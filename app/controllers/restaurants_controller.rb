@@ -5,7 +5,7 @@ class RestaurantsController < ApplicationController
 
   def index
     @restaurants = Restaurant.all
-    @notice = "Please sign up or sign in to add a restaurant"
+    @notice = "Please sign up or sign in to add, update or delete a restaurant"
   end
   def show
     @restaurant = Restaurant.find(params[:id])
