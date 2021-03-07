@@ -41,7 +41,7 @@
             <%= review.body %>
             <% if current_user.id == @restaurant.user_id%>
             <p>
-              <%= link_to "delete", [review.restaurant, review], method: :delete, data:{confirm: "Are you sure?"}, class:"btn btn-danger btn-sm mt-2"%>
+              <%= link_to "delete", [review.restaurant, review], method: :delete, data:{confirm: "Are you sure?"}, class:"btn btn-danger btn-sm mt-4"%>
             </p>
             <% end%>
           </div>
