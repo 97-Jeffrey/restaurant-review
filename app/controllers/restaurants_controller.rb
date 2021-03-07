@@ -1,4 +1,6 @@
 class RestaurantsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :correct_user, only:[:edit, :update, :destroy]
 
   def index
     @restaurants = Restaurant.all
@@ -36,6 +38,11 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.find(params[:id])
     @restaurant.destroy
     redirect_to restaurants_path, {notice: "A restaurant deleted"}
+  end
+
+  def correct_user
+    @restaurant = current_user.restaurants.find_by(id: params[:id])
+    redirect_to restaurants_path, notice: "Not authorized to edit this restaurant" if @restaurant.nil?
   end
 
   private
