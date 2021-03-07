@@ -1,5 +1,5 @@
 <% if user_signed_in?%>
-<div style="margin-left:200px;"><%= link_to "Add a restaurant", new_restaurant_path, class:"btn btn-secondary m-3"%></div>
+<div><%= link_to "Add a restaurant", new_restaurant_path, class:"btn btn-secondary m-3"%></div>
 <% else%>
  <div class="alert alert-warning alert-dismissible fade show mt-3" role="alert">
   <%= @notice%>
