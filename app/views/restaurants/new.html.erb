@@ -1,23 +1,23 @@
-<h1>Add a new restaurant</h1>
+<h1 class="m-3">Add a new restaurant</h1>
 
 <%= form_with scope: :restaurant, url: restaurants_path, local:true do |form|%>
 
 <div>
-    <%= form.text_field :name, class:"form-control m-2 mt-4", placeholder:"Restaurant name" %>
+    <%= form.text_field :name, class:"form-control m-2 m-3 w-50", placeholder:"Restaurant name" %>
 </div>
 
 <div>
 
-    <%= form.text_field :address, class:"form-control m-2", placeholder:"Restaurant address" %>
+    <%= form.text_field :address, class:"form-control m-3 w-50", placeholder:"Restaurant address" %>
 </div>
 <div>
-    <%= form.text_field :cuisine, class:"form-control m-2", placeholder:"What Cuisine"  %>
+    <%= form.text_field :cuisine, class:"form-control m-3 w-50", placeholder:"What Cuisine"  %>
 </div>
 <div>
-    <%= form.text_field :image_url, class:"form-control m-2", placeholder:"Please provide a image url"  %>
+    <%= form.text_field :image_url, class:"form-control m-3 w-50", placeholder:"Please provide a image url"  %>
 </div>
 <div>
-    <%= form.text_field :description, class:"form-control m-2", placeholder:"Give a description"  %>
+    <%= form.text_field :description, class:"form-control m-3 w-50", placeholder:"Give a description"  %>
 </div>
 <div>
     <%= form.number_field :user_id, id: :restaurant_user_id, class:"form-control m-2", value: current_user.id, type: :hidden  %>
