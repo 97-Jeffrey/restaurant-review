@@ -34,7 +34,7 @@
         <h2>All reviews:</h2>
       <% end%>
         <% @restaurant.reviews.each do |review|%>
-          <div class="m-4" style="border:2px solid orange; max-width:500px; padding:10px; border-radius:15px;">
+          <div class="m-4" style="border:2px solid orange; width:500px; padding:10px; border-radius:15px;">
             <h4><%= review.person %>:</h4>
             <%= review.body %>
             <% if current_user.id == @restaurant.user_id%>
