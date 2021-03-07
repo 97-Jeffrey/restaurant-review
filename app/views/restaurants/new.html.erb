@@ -20,7 +20,7 @@
     <%= form.text_field :description, class:"form-control m-2", placeholder:"Give a description"  %>
 </div>
 <div>
-    <%= form.text_field :user_id, class:"form-control m-2", value: current_user.id  %>
+    <%= form.number_field :user_id, id: :restaurant_user_id, class:"form-control m-2", value: current_user.id, type: :hidden  %>
 </div>
 
 
