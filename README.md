@@ -2,13 +2,9 @@
 
 ### This app allows authenticated users to create a restaurant, edit restaurant info, and remove it. Users can also leave a review about a restaurant.
 
-<br>
-
 ### The ruby version I am using: 3.0.0
 
 ### The rails version I am using: 6.1.3
-
-<br>
 
 ### Screenshots of the App:
 
