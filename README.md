@@ -20,6 +20,8 @@
 
 ### And users that added the restaurant are allow to edit or delete the restaurant:
 
+![](https://github.com/97-Jeffrey/restaurant-review/blob/master/doc/Screen%20Shot%202021-03-07%20at%208.58.51%20PM.png?raw=true)
+
 ### After cloning the project:
 
 - Please run `rails s` to start the server.
